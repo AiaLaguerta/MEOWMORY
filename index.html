@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> MEOWMORY</title>
+        <style>
+
+            @font-face { font-family: KiddosyfreeRegular-GOEag; src:url("KiddosyfreeRegular-GOEag.OTF"); }
+
+            body{
+                background-image: url("bg2.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                max-height:100vh;
+
+            }
+
+            .box{
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .box2{
+                display: flex;
+                justify-content: space-around;
+            }
+            
+            .PageTitle{
+                font-size: 3em;
+                max-width: 6em;
+                color: white;
+                font-family: KiddosyfreeRegular-GOEag;
+                text-align: center;
+                padding-left: 3cm;
+                padding-top: 98px;
+            }
+
+            .Username{
+                font-size: 3em;
+                max-width: 6em;
+                color: white;
+                font-family: KiddosyfreeRegular-GOEag;
+                text-align: center;
+
+                padding-right: 50px;
+                padding-top: 10px;
+            }
+
+            .Login{
+                font-family: KiddosyfreeRegular-GOEag;
+                text-align: center;
+                max-width: 6em;
+                color:white;
+                margin-left: 3.5cm;
+                margin-top: 118px;
+                box-shadow: none;
+                border-color: none;
+            }
+
+            .subby{
+                font-family: KiddosyfreeRegular-GOEag;
+                background-color: beige;
+                box-shadow: none;
+            }
+
+            #username{
+                font-size: 20px;
+                background-color: beige;
+            }
+
+            input:invalid {
+                border: 1px solid red;
+            }
+
+            .playButton{
+                font-family: KiddosyfreeRegular-GOEag;
+                margin-top: 8%;
+                font-size: 90px;
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                padding-right: 32%;
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <div class="box">
+
+        <div>
+        <h1 class="PageTitle"> Meoww~
+            Welcome to Meowmory,</h1>
+            <br>
+        </div>
+        
+        <div>
+       <form class="Login" onsubmit="return submitForm();">
+        <fieldset class="Login">
+            <div>    
+                <label for="username">Username:</label>
+                <br>
+                <input type="text" id="username" name="username" required>
+                <br><br>
+            </div>
+        </fieldset>
+            <div>
+               <button type="submit" class="subby">Submit</button>
+            </div>
+        </form>
+        </div>
+
+        </div>
+
+        </div>
+        
+        <br>
+
+        <div class="box2">
+        <h3 class="Username"> !</h3>
+
+        <br>
+        <a href = "main.html" target="_self" class="playButton"> PLAY </a>
+        
+        </div>
+
+        <script>
+            function submitForm() {
+                var name = document.getElementByName('username').value;
+                document.getElementByClass('Username').html = name;
+            }
+          </script>
+    </body>
+</html>
